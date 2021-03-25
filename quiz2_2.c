@@ -3,7 +3,7 @@ int main()
 {
     long long m,n;
     scanf("%lld %lld",&m,&n);
-    long long box [n][m];
+    long long box[n][m];
     char king[m][70];
     for(int i=0;i<m;i++)
     {
@@ -29,11 +29,13 @@ int main()
                 {
                     if(g==box[i][1]-1)
                     {
+                        int buy=g;
                         for(int p=1;p<=box[i][2];p++)
                         {
                             king[j][g]='x';
                             g++;
                         }
+                        g=buy;
                     }
                 }
             }
